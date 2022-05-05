@@ -1,0 +1,68 @@
+// Миксы и бэм - блоки
+
+$maw: 1440;
+.container {
+    // max-width: $maw + 30 + px;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: $maw + px;
+    box-sizing: content-box;
+
+    &_narrow {
+        max-width: 1024px;
+    }
+    &_medium {
+        max-width: 1268px;
+    }
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 150%;
+
+    text-align: center;
+    text-transform: capitalize;
+}
+.subheading {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 150%;
+
+    text-align: center;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 150%;
+
+    text-align: center;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 150%;
+
+    text-align: center;
+}
+.wrapper {
+    // in all projects
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100%;
+
+    overflow: hidden;
+}
+.page {
+    flex: 1 1 auto;
+
+    // display: flex;
+    // flex-direction: column;
+    // height: 100%;
+    // .third {
+    //     flex: 1 1 auto;
+    // }
+}

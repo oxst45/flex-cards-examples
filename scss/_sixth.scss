@@ -1,0 +1,14 @@
+.sixth {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -23.5px -33.5px;
+        justify-content: center;
+        // border: 1px solid #000;
+    }
+
+    &__column {
+        padding: 23.5px 33.5px;
+        flex: 0 1 20%;
+    }
+}

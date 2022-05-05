@@ -1,0 +1,111 @@
+.fifth {
+    // &__container {
+    //     padding: 60px 0px;
+    // }
+
+    &__subheading {
+        margin-bottom: 22px;
+    }
+
+    &__row {
+        display: flex;
+        margin: 0px -3.5px;
+        justify-content: center;
+    }
+
+    &__column {
+        flex: 0 1 33.334%;
+        padding: 0px 37.5px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        padding: 92px 28px 23px 28px;
+        transition: all 0.3s ease 0s;
+
+        border: 2px solid transparent;
+        border-radius: 10px;
+
+        &:hover {
+            border: 2px solid #000000;
+            // box-sizing: border-box;
+            box-shadow: 1px 1px 10px rgba(88, 26, 168, 0.75);
+
+            .fifth__title {
+                color: #581aa8;
+            }
+            .fifth__title::after {
+                background: rgba(88, 26, 168, 0.4);
+            }
+        }
+    }
+
+    &__title {
+        transition: all 0.3s ease 0s;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 137%;
+
+        margin-bottom: 14px;
+        position: relative;
+        &::after {
+            transition: all 0.3s ease 0s;
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #eaffaf;
+
+            border-radius: 15px;
+            left: 0;
+            top: -59px;
+        }
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        margin-bottom: 23px;
+
+        font-size: 15px;
+        line-height: 150%;
+        color: #666666;
+    }
+
+    &__wrap-more {
+    }
+
+    &__more {
+        font-size: 11px;
+        line-height: 150%;
+        color: #000000;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            color: #581aa8;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .fifth {
+        &__row {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: -35px -70px;
+        }
+
+        &__column {
+            padding: 35px 70px;
+            flex: 0 1 50%;
+        }
+    }
+}
+@media (max-width: 785px) {
+    .fifth {
+        &__column {
+            flex: 0 1 70%;
+        }
+    }
+}

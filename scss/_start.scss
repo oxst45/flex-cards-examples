@@ -1,0 +1,174 @@
+.start {
+    &__heading {
+        margin-bottom: 10px;
+    }
+
+    &__subheading {
+        margin-bottom: 49px;
+    }
+
+    &__row {
+        display: flex;
+        margin: 0 -27px;
+    }
+
+    &__column {
+        padding: 0px 37px;
+        flex: 0 1 25%;
+    }
+
+    &__item {
+        // Внутрениий отступ внутри карточки
+        // Задний фон
+        // Рамка
+        // Тень
+        padding: 30px;
+
+        background: #dddddd;
+        border-radius: 4px;
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        &:hover {
+            background: #ffffff;
+            box-shadow: 0px 0px 15px 1px #000000;
+            border-radius: 4px;
+        }
+    }
+
+    &__image {
+        margin: 0px auto;
+        width: 240px;
+        height: 180px;
+        img {
+            // Не забудь про высоту/ширину элемента
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        margin-bottom: 22px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 150%;
+
+        text-align: center;
+
+        margin-bottom: 11px;
+    }
+
+    &__text {
+        // Увеличивает высоту элемента (заполняет родителя)
+        flex: 1 1 auto;
+
+        font-size: 16px;
+        line-height: 150%;
+
+        text-align: center;
+
+        margin-bottom: 23px;
+    }
+    &__wrap-more {
+        margin: 0px auto;
+    }
+
+    &__more {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 150%;
+
+        text-align: center;
+
+        color: #000000;
+
+        padding-right: 12px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 6px; // Важно, чтобы ссылка была не inline
+            right: 0;
+
+            width: 0px;
+            height: 0px;
+            // Какого он цвета? (чёрный)
+            // Куда смотрит треугольник? (направо)
+            border-left: 7px solid #000;
+            // border-left: устанавливает ширину треугольник
+
+            // У треугольника 3 стороны, значит должно быть 3 грацниы (border)
+            // Границы должны устанавливать высоту, т.к. ширина уже задана
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+        }
+    }
+}
+
+// Все стили внутри этого медиа запроса имеют наибольший приорит при
+// Ширине экрана от 0 до 1024px включительно
+
+// 1920 - FullHd  +++
+// 1600
+// 1440
+// 1336 - ноутбук
+// 1024 - планшет +++
+// 768
+// 425
+// 375 +++
+// 320
+
+// @media (max-width: 1500px) {}
+// mobileFirst - @media (min-width: 345px) {}
+
+// mobileFirst - @media (min-width: 1024px) {
+//     &:hover{
+//         Эффект hover аботает от 1024 и более
+//     }
+// }
+
+@media (max-width: 1500px) {
+    .start {
+        &__row {
+            flex-wrap: wrap;
+            margin: -37px -27px;
+        }
+
+        &__column {
+            flex: 0 1 50%;
+            padding: 37px; // padding: 37px 37px
+        }
+    }
+}
+@media (max-width: 767px) {
+    .start {
+        &__row {
+            // margin: -7.5px -7.5px;
+            margin: -15px;
+        }
+
+        &__column {
+            // padding: 7.5px 7.5px;
+            padding: 15px;
+        }
+    }
+}
+@media (max-width: 700px) {
+    .start {
+        &__column {
+            flex: 0 1 100%;
+            padding: 7.5px;
+        }
+        &__row {
+            margin: -7.5px;
+        }
+
+        &__item {
+            padding: 30px 15px;
+        }
+    }
+}
